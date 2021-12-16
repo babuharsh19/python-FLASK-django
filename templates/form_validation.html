@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <p>
+    <h1>PLease enter one of the following meal to get calorie count per 100g</h1>
+    <l>{% for i in diet %} <li>{{ i }}</li> {%endfor %}</l>
+    </p>
+<form method=POST>
+    
+    {{form.meal.label}} {{form.meal(class='some-css-class')}}
+    {{form.submit()}}
+</form>
+ <p>{% if meal in diet %}
+            the meal you entered is {{meal}}
+            and calories in {{meal}} are  {{diet[meal] }}
+        {%else %}
+            please enter a meal from above list
+        {% endif %}
+        </p>
+</body>
+</html>

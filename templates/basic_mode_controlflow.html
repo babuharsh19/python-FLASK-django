@@ -1,0 +1,11 @@
+{%extends 'base.html' %}
+{%block content%}
+<p>This is application of control flow using jinja format in python</p>
+<h1> These are candidates :</h1>
+<l>{% for candidate in candidates %} <li>{{ candidate }}</li> {%endfor %}</l>
+{% if name in candidates %}
+    <h1>welcome {{name}} to our website</h1>
+{% else %}
+    <h1>sorry you arte not in the candidates list so you can't get access to website</h1>
+{% endif %}
+{% endblock %}

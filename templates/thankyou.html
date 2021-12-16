@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="jumbotron text-center">
+    <h1 class="display-3">Thank You!</h1>
+    <p class="lead"><strong>Your registration is completed</strong> Please check your mail for mail verification</p>
+    <hr>
+    <p class="lead">
+      <a class="btn btn-primary btn-sm" href ={{url_for('welcome')}} role="button">Continue to homepage</a>
+    </p>
+    <h1 class="topnav"id="myTopnav"></h1>
+    <a class="active" href="{{url_for('welcome')}}">Home</a>
+    <a href={{url_for('signup')}}>New signup</a>
+  </div>
+  {%endblock%}
